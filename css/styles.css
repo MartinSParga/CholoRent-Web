@@ -329,7 +329,8 @@ button[type='submit']:hover {
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   border-radius: 24px;
   line-height: 1.6;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
@@ -423,38 +424,39 @@ button[type='submit']:hover {
 
 /* Features Responsive */
 @media (max-width: 700px) {
-  .features {
-    gap: 2rem; /* reduce grid gap */
-  }
-
   .card {
-    width: 200px; /* adjust card width */
-    margin-top: 1.5rem; /* spacing between stacked cards */
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1.5rem;
   }
 }
+
 @media (max-width: 500px) {
   .features {
-    gap: 1.2rem; /* smaller grid gap */
     grid-template-columns: 1fr;
+    gap: 1.2rem;
+    justify-items: stretch;
   }
 
   .card {
-    margin-top: 1.2rem; /* spacing for stacked cards */
+    width: 100%;
+    max-width: none;
   }
 
   .content {
-    padding: 24px; /* reduce padding for small cards */
+    padding: 24px;
   }
 
   .content .para {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .content-icon {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
   }
 }
+
 
 /* CONTACT */
 .contact-flex {
